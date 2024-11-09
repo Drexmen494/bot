@@ -1,0 +1,18 @@
+import discord
+from discord .ext import comands
+intnent = dicord.intent defulat()
+intnent.massage_content = True
+sbot = comands.Sbot(comands_prefix="!", intents =intents)
+@sbot.event
+async def on_ready():
+  print(f"olarak giriş yap")
+
+@sbot.event
+async def on massage(massage):
+  if massage author == sbot.user:
+    return
+if massage.content.startswith("!"):
+  await massage.delete()
+  await massage.chanel.send(massage.content)
+await sbot process_comands(massage)
+sbot.run("eeeeeee")#token
